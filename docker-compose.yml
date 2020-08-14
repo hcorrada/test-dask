@@ -17,5 +17,6 @@ services:
   client:
     build: client
     environment:
-        - DASK_SCHEDULER_ADDRESS=scheduler:8786
-    command: ["python", "script.py"]
+        - DASK_SCHEDULER_HOST=scheduler
+        - DASK_SCHEDULER_PORT=8786
+    command: ["/app/script.sh"]
